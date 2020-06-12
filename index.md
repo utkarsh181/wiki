@@ -1,6 +1,8 @@
 # My Notes
 
 * [Vim](Vim Master)
+* [DSA](DSA)
+	* [Graphs](Graphs)
 * [Git](Git Notes)
 * [Web Development](Web Development)
 	* [Bootstrap](Intro To Bootstrap)
