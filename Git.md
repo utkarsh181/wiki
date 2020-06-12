@@ -1,0 +1,60 @@
+# Intro To Git
+Git is a distributed version-control system for tracking changes in source code during software development.It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
+
+# Terminology's in Git
+- root : The folder that is currently tracked by git.
+- tree : Folders and sub-folder inside root.
+- blob : These are the file inside trees.
+
+# Data Structure Of Git
+Git follows [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) as there data structure which means that they are just directed graph which doesn't contains any cycle.
+It's data types are defined as -
+```
+// This is just pseudo code
+
+type blob = array<byte> // byte just means stream of data
+
+// map means that it represents or points to or map to.
+
+type tree = map<string , tree|blob> // | represents 'or'
+
+type commit = struct{
+	parent = array<commit>
+	author = string
+	message = string
+	shapshot = tree
+}
+```
+It's data are stored as
+
+```
+type object = blob | tree | commit
+
+object = map<string,object>
+
+define store(data) // how git stores data
+	id = shal(data) // shal is a function which converts input into hash
+	object[id] = data ;
+
+define load(id) // how git loades id
+	return object[id]
+
+```
+It represents(ie to present in human readable form ) data as
+
+```
+reference = map<string,string>
+```
+Reference are need as they makes hash readable but also but they can be used to point to different portion of the history which means hash are mutable but id's are not.
+
+
+# Git Commands
+- git-help : display help info about git.
+- git-init : create an empty git repository or reinitialize an existing one.
+- git-add : used to update index which helps to add a tree or a blob in next commit.
+- git-commit : used record change in repository. // Rather than using git-add on same file we can use git-commit -a
+- git-log : used to show commit logs. // Use git-log --all --graph --decorate TODO: create alias
+- git-cat-file : provide content or type and size information for repository objects.
+- git-branch : to create new branch.
+- git-checkout : switch branches or restore working tree files. // To move to new branch ( ie that is not created ) use git-checkout -b
+- git-diff : to see changes between two commits.
