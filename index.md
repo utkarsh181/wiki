@@ -3,6 +3,8 @@
 * [Vim](Vim Master)
 * [DSA](DSA)
 	* [Graphs](Graphs)
+	* [Heap](Heap)
+	* [Hash](Hash)
 * [Git](Git Notes)
 * [Web Development](Web Development)
 	* [Bootstrap](Intro To Bootstrap)
