@@ -7,6 +7,7 @@
 	* [Hash](Hash)
 * [Git](Git Notes)
 * [Web Development](Web Development)
+	* [Javascript](Intro To Javascript)
 	* [Bootstrap](Intro To Bootstrap)
 		* [Grid System](Bootstrap's Grid System)
 	* [CSS](Intro To CSS)
