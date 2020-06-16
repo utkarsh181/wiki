@@ -1,7 +1,7 @@
 # Notation
-Vim keys combination can be represented in tree ways.
-`^v , Ctrl-v ,<C-v>` all represent ctlr+v
-`Shift-v ,<S-v>` all represent shift+v
+Vim keys combination can be represented in tree ways:
+- `^v , Ctrl-v ,<C-v>` all represent ctlr+v
+- `Shift-v ,<S-v>` all represent shift+v
 
 # Modes
 1. Normal Mode
