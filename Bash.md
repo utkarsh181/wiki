@@ -47,9 +47,38 @@ For the next set of operators keep short circuiting of operators in mind.
 	sleep 5 & printf "All done"
 
 	```
+- man test : gives brief overview of values that you can use to compare value.
+
 # Reserved Keywords
 - `$1` - `$9` : represent 1 to 9 argument.
 - `$0` : represent name of the script
 - `$?` : represent error code of the last command.
+	Error code 0(ie think in terms of binary representation on 0 , all bits are down) represent everything worked well and anything other than zero means there is some error with the program.
 - `$_` or `!!` : represent previous last command.
--
+- `$$` : represent pid.
+
+# Using Output
+To use output of a command .
+```
+printf "We are in $(pwd)"
+```
+# Redirection
+[Bash Redirection Explained](https://catonmat.net/bash-one-liners-explained-part-three)
+- 0 - Points to stdout
+- 1 - Points to stdin
+- 2 - Points to stderr
+
+The special file /dev/null discards all data written to it.
+
+```
+# Both of these are same.
+libreoffice &>/dev/null
+libreoffice 1>/dev/null 2>&1
+```
+Use of stdin -
+
+```
+cat <(ls) <(ls..)
+```
+
+# Globbing
