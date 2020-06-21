@@ -15,5 +15,9 @@
 		* [Box Model](Box Model)
 		* [Specificity And Inderitence](Specificity And Inderitence)
 	* [Html5](Intro To Html)
-* [Regex](Basics Of Regex)
+* [Data Wrangling]()
+	* [Regex](Basics Of Regex)
+	* [Sed](sed)
 * [Bash](Bash)
+* [C][C_notes]
+	* [Strings](strings_suck)

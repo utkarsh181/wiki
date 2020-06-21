@@ -81,4 +81,14 @@ Use of stdin -
 cat <(ls) <(ls..)
 ```
 
+# Unknow Interpreter
+
+If location of interpretor in unknown then we can use env command :
+```
+#!/usr/bin/env python OR #!/usr/bin/env bash
+```
+# Easy form of man
+
+'tldr' are easy form of man pages which are intuitive and easy to use.
+
 # Globbing

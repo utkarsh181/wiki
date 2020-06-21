@@ -30,6 +30,15 @@ let myVariable; // This is camel case style on naming variable.
 - [Data Types And Structure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 - [Why to use Camel Case In JavaScript ](https://stackoverflow.com/questions/33094418/why-use-camel-case-for-js-and-snake-case-for-your-db)
 
+## null and undefined
+[Stack Overflow Explanation](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
+
+```
+// typeof on undefined.
+alert(typeof null); // returns object.
+```
+Quote from the book Professional JS For Web Developers (Wrox): "You may wonder why the typeof operator returns 'object' for a value that is null. This was actually an error in the original JavaScript implementation that was then copied in ECMAScript. Today, it is rationalized that null is considered a placeholder for an object, even though, technically, it is a primitive value."
+
 # Comment
 You can write comments in JavaScript just as you can in CSS:
 
@@ -42,16 +51,51 @@ Everything in between is an comment.
 ```
 
 # Expression And Operators
+
 [MDN Docs For Operators And Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+
 [State Of Equality Operators](https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons)
 
+# Strings
+```
+let sampleStr = "Alan said, \"Peter is learning JavaScript\"."; // '\' works like escape sequence.
+```
+Some important escape sequence :
+- \' - single quote
+- \" - double quote
+- \\ - backslash
+- \n - newline
+- \r - carriage return
+- \t - tab
+- \b - word boundary
+- \f - form feed
+
 # Conditionals
+
 - [if..else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 
+# Truth and False value
+
+False Value -
+- false
+- 0
+- "" // Empty String
+- null
+- undefined
+- NaN // Not A Number
+Everything else in truth.
+
+# Iteration
+
+[MDN Docs on Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
 # Function
+
 [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+
 # Events
+
 Real interactivity on a website requires events handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse.
 
 Ex -
