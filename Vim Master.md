@@ -37,7 +37,10 @@ Vim keys combination can be represented in tree ways:
 
 # Searching
 1. To search a character- :/+(character)
-2. To remove highlight from searched character- :noh
+2. To move ahead and backward through a list of search- n and `<S-n>`
+3. To remove highlight from searched character- :noh
+4. To search word under cursor- *
+5. To search word under cursor in backward motion- #
 
 # Modifiers
 1. To change word inside a character - ci(ie inside)+(character)

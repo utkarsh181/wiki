@@ -5,7 +5,7 @@ This note will only act as a source for useful links related to JS basics.
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-Pro Tip : Everything thing in JS is a **object**.
+Pro Tip : Everything thing in JS is a **object** and all types except object type are **immutable**.
 
 # Add JS to your HTML
 In your .html file, enter this code on a new line, just before the closing </body> tag:
@@ -27,7 +27,7 @@ let myVariable; // This is camel case style on naming variable.
 - [Naming Rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables)
 - [Case Style For Variables](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
 - [Why to use let over var](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let)
-- [Data Types And Structure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [Data Types And Structure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) // **Just read this**
 - [Why to use Camel Case In JavaScript ](https://stackoverflow.com/questions/33094418/why-use-camel-case-for-js-and-snake-case-for-your-db)
 
 ## null and undefined
@@ -69,6 +69,23 @@ Some important escape sequence :
 - \t - tab
 - \b - word boundary
 - \f - form feed
+
+Strings in js is immutable.
+
+```
+let foo = "Utkarsh";
+
+foo[2] = 'k' ; // This is not throw any error but foo will be unchanged.
+
+let foo = ['u', 't', 'k', 'a',  'r' , 's', 'h'];
+
+foo[2] = 'c' ; // This is not same as above but will give us u,t,c,a,r,s,h but this differ from "utcarsh".
+```
+Difference between string and boolean.
+
+```
+let bool = true ; let string = "true" ; // true is a boolean data type whereas "true" is a string.
+```
 
 # Conditionals
 

@@ -8,6 +8,8 @@
 * [Git](Git Notes)
 * [Web Development](Web Development)
 	* [Javascript](Intro To Javascript)
+		* [Arrays](jsArray)
+		* [Objects](jsObjects)
 	* [Bootstrap](Intro To Bootstrap)
 		* [Grid System](Bootstrap's Grid System)
 	* [CSS](Intro To CSS)
