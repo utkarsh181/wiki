@@ -34,6 +34,29 @@ console.log(years.0)   // a syntax error
 console.log(years[0])
 ```
 
+# Spread Operator
+[MDN on Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+```
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers)); // expected output: 6
+
+console.log(sum.apply(null,numbers)) // Same as above but without spread operator we have use apply as sum expects numbers seperated by ',' and not an array. If we pass a array it will return NaN
+```
+# De-structuring Array
+```
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); // 1, 2
+console.log(arr); // [3, 4, 5, 7]
+
+const [,,...arr] = [1,2,3,4];
+console.log(arr); // [3,4]
+```
 # Common operations
 - arrayName.push(item) - Append array
 - arrayName.pop() - Delete last element of array

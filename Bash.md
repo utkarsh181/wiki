@@ -81,9 +81,9 @@ Use of stdin -
 cat <(ls) <(ls..)
 ```
 
-# Unknow Interpreter
+# Unknown Interpreter
 
-If location of interpretor in unknown then we can use env command :
+If location of interpreter in unknown then we can use env command :
 ```
 #!/usr/bin/env python OR #!/usr/bin/env bash
 ```

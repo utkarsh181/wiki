@@ -54,7 +54,12 @@ Vim keys combination can be represented in tree ways:
 
 # Others
 1. To open link in browser- gx
-2. To move to given line number- line-number G // Without using relative line number
+2. To move to given line number- line-number g // without using relative line number
+3. To print ASCII code of character - ga
+4. To uppercase a word - gUw
+5. To lowercase a word - guw
+6. To change case of word - g~w
+7. To change case of line - gUU , guu , g~~
 
 # Coc bindings
 1. Spell Check Using Coc-Action-\(leader key)+w(for current word) For more- [Coc Spell Github](https-//github.com/iamcco/coc-actions)

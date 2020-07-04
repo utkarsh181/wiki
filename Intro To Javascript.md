@@ -21,6 +21,10 @@ Variables are containers that store values. You start by declaring a variable wi
 
 ```
 let myVariable; // This is camel case style on naming variable.
+
+var myVariable; // Older style of declaring variable error prone but widder browser support like konqeror and IE11
+
+const MYNAME = "utkarsh" ; // Creates read-only variable , generally const variable are declared in ALL_CAPS
 ```
 
 - [Semicolons in JS](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/)
@@ -31,13 +35,29 @@ let myVariable; // This is camel case style on naming variable.
 - [Why to use Camel Case In JavaScript ](https://stackoverflow.com/questions/33094418/why-use-camel-case-for-js-and-snake-case-for-your-db)
 
 ## null and undefined
-[Stack Overflow Explanation](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
+	[Stack Overflow Explanation](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
 
-```
-// typeof on undefined.
-alert(typeof null); // returns object.
-```
-Quote from the book Professional JS For Web Developers (Wrox): "You may wonder why the typeof operator returns 'object' for a value that is null. This was actually an error in the original JavaScript implementation that was then copied in ECMAScript. Today, it is rationalized that null is considered a placeholder for an object, even though, technically, it is a primitive value."
+	```
+	// typeof on undefined.
+	alert(typeof null); // returns object.
+	```
+	Quote from the book Professional JS For Web Developers (Wrox): "You may wonder why the typeof operator returns 'object' for a value that is null. This was actually an error in the original JavaScript implementation that was then copied in ECMAScript. Today, it is rationalized that null is considered a placeholder for an object, even though, technically, it is a primitive value."
+
+## const keyword
+	```
+	const ARR = [1 , 2 , 3];
+
+	ARR = [1 , 2 , 4] // throws error
+
+	ARR[0] = 2 // Works fine because const prevent the variable to get assigned with new values but doesn't make it un-mutable
+
+	But , here comes the intresting part
+
+	Objects.freeze(ARR); // Please do yourself a favour https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+
+	ARR[0] = 2 // TypeError: invalid assignment to const `array'
+	```
+
 
 # Comment
 You can write comments in JavaScript just as you can in CSS:
@@ -111,6 +131,40 @@ Everything else in truth.
 # Function
 
 [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+Declaring a function :
+
+```
+function functionName(variable){
+	return yourChoice ;
+}
+
+let funtionName = function(variable){  // This type help to create function with var , let and const keyword.
+	return yourChoice ;
+}
+
+const myFunc = () => {  	//  ES6 arrow function sysntax
+  const myVar = "value";
+  return myVar;
+}
+```
+To declare funtion with variable number of arguments using rest parameter
+
+```
+function funtionName(...args){
+	let sum = 0 ;
+	for(let i=0 ; i<args.length ; i++){
+		sum += args[i];
+	}
+	return sum;
+}
+```
+Rest parameter stores argument in an array that accessed later inside the funtion.
+
+Some useful js function -
+- Math.random()
+- Math.floor()
+- parseInt()
+- .hasOwnProperty(propertyName)
 
 # Events
 

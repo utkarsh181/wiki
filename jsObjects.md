@@ -1,4 +1,4 @@
-# Objects
+[#](#) Objects
 
 [MDN Docs on Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
@@ -27,6 +27,28 @@
 	myObj["NoSpace"];    // USS Enterprise
 	```
 	Bracket Notation is also useful when we use variables to access object difference is then we don't use `""` around variables name.
+
+# Destructing Assignment
+
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+```
+const user = { name: 'John Doe', age: 34 };
+
+const { name , age } = user ; // variable name and age will be assigned to respective values fro user object.
+
+const { name:userName , age:userAge } = user ; // variable userName and userAge will get respective value.
+```
+For nested object.
+
+```
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+const { today: { low:lowToday , high:highToday } } = LOCAL_FORECAST ;
+```
 
 # Some Useful method
 
