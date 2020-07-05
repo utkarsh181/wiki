@@ -45,6 +45,7 @@ Vim keys combination can be represented in tree ways:
 # Modifiers
 1. To change word inside a character - ci(ie inside)+(character)
 2. To change word around a character - ca(ie around)+(character)
+3. TODO learn about norm and macro
 
 # Buffers
 1. To split current buffer into half- :sp
