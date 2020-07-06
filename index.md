@@ -23,3 +23,4 @@
 * [Bash](Bash)
 * [C][C_notes]
 	* [Strings](strings_suck)
+	* [Mistakes](c_mistakes.md)
