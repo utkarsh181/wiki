@@ -13,5 +13,4 @@
 - ? - optional
 
 Example to match any email address - "\S\+@\S\+\.[A-Za-z]\+"
-
 Example to match a line that start with capital letter and end with capital letter - "^[A-Z]*$"

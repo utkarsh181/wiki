@@ -2,7 +2,6 @@ This note will only act as a source for useful links related to JS basics.
 
 # Intro To Javascript
 [MDN Docs For JS definition](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
 Pro Tip : Everything thing in JS is a **object** and all types except object type are **immutable**.
@@ -21,9 +20,7 @@ Variables are containers that store values. You start by declaring a variable wi
 
 ```
 let myVariable; // This is camel case style on naming variable.
-
 var myVariable; // Older style of declaring variable error prone but widder browser support like konqeror and IE11
-
 const MYNAME = "utkarsh" ; // Creates read-only variable , generally const variable are declared in ALL_CAPS
 ```
 
@@ -46,19 +43,12 @@ const MYNAME = "utkarsh" ; // Creates read-only variable , generally const varia
 ## const keyword
 	```
 	const ARR = [1 , 2 , 3];
-
 	ARR = [1 , 2 , 4] // throws error
-
 	ARR[0] = 2 // Works fine because const prevent the variable to get assigned with new values but doesn't make it un-mutable
-
 	But , here comes the intresting part
-
 	Objects.freeze(ARR); // Please do yourself a favour https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
-
 	ARR[0] = 2 // TypeError: invalid assignment to const `array'
 	```
-
-
 # Comment
 You can write comments in JavaScript just as you can in CSS:
 
@@ -94,11 +84,8 @@ Strings in js is immutable.
 
 ```
 let foo = "Utkarsh";
-
 foo[2] = 'k' ; // This is not throw any error but foo will be unchanged.
-
 let foo = ['u', 't', 'k', 'a',  'r' , 's', 'h'];
-
 foo[2] = 'c' ; // This is not same as above but will give us u,t,c,a,r,s,h but this differ from "utcarsh".
 ```
 Difference between string and boolean.

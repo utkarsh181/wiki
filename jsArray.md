@@ -16,11 +16,8 @@ Just like C/C++, js also uses 0 based indexing to access element in array. Some 
 
 ```
 var myArray = [["Bulls",23],["White Sox",45]];
-
 var myVar = myArray[0] // This returns array ["Bulls",23]
-
 var myVar = myArray[0][1] // This returns integer 23
-
 var myVar = myArray[0][2] // This returns undefined
 ```
 
@@ -28,9 +25,7 @@ JavaScript properties that begin with a digit cannot be referenced with dot nota
 
 ```
 let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
-
 console.log(years.0)   // a syntax error
-
 console.log(years[0])
 ```
 
@@ -43,9 +38,7 @@ function sum(x, y, z) {
 }
 
 const numbers = [1, 2, 3];
-
 console.log(sum(...numbers)); // expected output: 6
-
 console.log(sum.apply(null,numbers)) // Same as above but without spread operator we have use apply as sum expects numbers seperated by ',' and not an array. If we pass a array it will return NaN
 ```
 # De-structuring Array

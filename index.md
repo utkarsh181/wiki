@@ -1,7 +1,7 @@
 # My Notes
 
 * [Vim](Vim Master)
-* [DSA](DSA)
+* [DSA]()
 	* [Graphs](Graphs)
 	* [Heap](Heap)
 	* [Hash](Hash)

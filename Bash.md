@@ -18,7 +18,6 @@ printf $foo # printf works liks C version of printf and a much mature and platfo
 There are two ways of defining strings in bash.
 ```
 printf "This will expand $foo"
-
 printf 'This will expand $foo'
 ```
 # Logical Operators
@@ -33,19 +32,16 @@ For the next set of operators keep short circuiting of operators in mind.
 - && : used to chain command which will run if first command is true and doesn't run if first command fails.
 	```
 	cd Documents && printf "We are in Document Directory"
-
 	cd notExist && printf "We are in notExist Directory"
 	```
 - || : used to chain command which will run if first command is false and doesn't run if first command true.
 	```
 	cd Documents || printf "We are in Document Directory"
-
 	cd notExist || printf "We are in notExist Directory"
 	```
 - & : this can be used to perform something called parallel processing or run multiple command in parallel.
 	```
 	sleep 5 & printf "All done"
-
 	```
 - man test : gives brief overview of values that you can use to compare value.
 
@@ -90,5 +86,10 @@ If location of interpreter in unknown then we can use env command :
 # Easy form of man
 
 'tldr' are easy form of man pages which are intuitive and easy to use.
+
+# String Manipulation
+
+- %
+When % is used in pattern ${variable%substring} it will return content of variable with the shortest occurance of substring deleted from back of variable.
 
 # Globbing

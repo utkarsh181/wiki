@@ -23,7 +23,8 @@ $$
 
 If
 
-$$ \gamma = 0.5
+$$
+ \gamma = 0.5
 $$
 
 then we say we have choosen a good hash.

@@ -3,13 +3,11 @@ HTML, or HyperText Markup Language, is a markup language used to describe the st
 
 # HOW TO COMMENT IN HTML FILE
 Example:
-
 ```
 <!-- <p> This is a paragraph </p> -->
 ```
-
 # BASIC INFROMATION OF HTML TAGS
-[Mozilla Guide For Basic Html](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) // Must read .
+[Mozilla Guide For Basic Html](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 1. ## THE IMAGE EMBED ELEMENT `<img>`
 [MDN Docs For img element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img)
 Used To Insert image.

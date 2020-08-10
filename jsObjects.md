@@ -1,4 +1,4 @@
-[#](#) Objects
+#Objects
 
 [MDN Docs on Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
@@ -33,9 +33,7 @@
 Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
 ```
 const user = { name: 'John Doe', age: 34 };
-
 const { name , age } = user ; // variable name and age will be assigned to respective values fro user object.
-
 const { name:userName , age:userAge } = user ; // variable userName and userAge will get respective value.
 ```
 For nested object.

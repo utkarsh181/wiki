@@ -11,57 +11,69 @@ Vim keys combination can be represented in tree ways:
 	1. Visual Line - Opens up with <S-v>
 	2. Visual Block - Opens up with <C-v>
 5. Command Mode - Opens with :
+6. Exit Vim - :q!, :qw, <S-zq>, <S-zz>
 
 # Movement
-1. To move top of page- H
-2. To move to middle of page- M
-3. To move to bottom of page- B
-4. To move x line up or down- line-number+(j or k) // Relative Line Number in Vim.
-5. To move to end of file- G
-6. To move to start of file- gg
+1. To move top of page - H
+2. To move to middle of page - M
+3. To move to bottom of page - B
+4. To move x line up or down - line-number+(j or k) // Relative Line Number in Vim.
+5. To move to end of file - <S-g>
+6. To move to start of file - gg
 7. To move cursor ahead and back by one word - w and b
 8. To move cursor to end of word - e
 9. To move down and up with greater speed - <C-e> and <C-u>
-10. To move cursor to highest , middle and lowest part of the visible screen - H , M and L
+10. To move cursor to highest , middle and lowest part of the visible screen - H, M and L
 11. To move cursor on and before a character - f and t
 12. Add text to one line below and above - o and <S-o>
 13. To move to previous cursor postion - <C-o>
 
 # Delete
-1. To delete a character- x
+1. To delete a character - x
 2. To delete till a character- dt+(character)
 3. To delete end of the word - de
 4. To delete a line - dd
-5. To delete x number of words - dxw
-6. To delete up-to and including that character-df+(character) For more- [Meaning Of t and f](https-//stackoverflow.com/questions/12495442/what-do-the-f-and-t-commands-do-in-vim)
+5. To delete till end of the line - <S-v>
+6. To delete x number of words - dxw
+7. To delete up-to and including that character - df+(character)
 
 # Searching
-1. To search a character- :/+(character)
-2. To move ahead and backward through a list of search- n and `<S-n>`
-3. To remove highlight from searched character- :noh
-4. To search word under cursor- *
-5. To search word under cursor in backward motion- #
+1. To search a character - :/+(character)
+2. To move ahead and backward through a list of search - n and `<S-n>`
+3. To remove highlight from searched character - :noh
+4. To search word under cursor - *
+5. To search word under cursor in backward motion - #
 
 # Modifiers
 1. To change word inside a character - ci(ie inside)+(character)
 2. To change word around a character - ca(ie around)+(character)
 3. TODO learn about norm
-4. Macro - q+(selected letter) starts recording , @+(selected letter) initialize the macro , (n)+@@ repeat macro 'n' times
+4. To change till end of the line - <S-c>
+5. Macro - q+(selected letter) starts recording , @+(selected letter) initialize the macro , (n)+@@ repeat macro 'n' times
 
 # Buffers
-1. To split current buffer into half- :sp
+1. To split current buffer into half - :sp
 2. To undo and redo change - u and <C-r>
 3. To copy and paste - y and p
 4. To paste above the current line - <S-p>
+5. Save session - :mksession file_name.vim
+6. To reposition the line you are currently on - zt, zz, zb for top, center and bottom
+7. Lets you autocomplete any open buffer - :b
 
 # Others
 1. To open link in browser- gx
-2. To move to given line number- line-number g // without using relative line number
+2. To move to given line number - line-number g // without using relative line number
 3. To print ASCII code of character - ga
 4. To uppercase a word - gUw
 5. To lowercase a word - guw
 6. To change case of word - g~w
 7. To change case of line - gUU , guu , g~~
+8. To move in tabs - gt(forward) or gT(backward) + number
+
+# Folding
+m -> more, r -> reduce
+1. To fold entire file or a block - z + <S-m> or z + m
+2. To unfold under cursor - z + o
 
 # Coc bindings
-1. Spell Check Using Coc-Action-\(leader key)+w(for current word) For more- [Coc Spell Github](https-//github.com/iamcco/coc-actions)
+1. Spell Check Using Coc-Action-\(leader key)+w(for current word)
