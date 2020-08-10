@@ -21,6 +21,6 @@
 	* [Regex](Basics Of Regex)
 	* [Sed](sed)
 * [Bash](Bash)
-* [C][C_notes]
+* [C][]
 	* [Strings](strings_suck)
 	* [Mistakes](c_mistakes.md)
