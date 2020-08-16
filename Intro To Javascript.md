@@ -33,7 +33,6 @@ const MYNAME = "utkarsh" ; // Creates read-only variable , generally const varia
 
 ## null and undefined
 	[Stack Overflow Explanation](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
-
 	```
 	// typeof on undefined.
 	alert(typeof null); // returns object.

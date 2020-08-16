@@ -1,5 +1,6 @@
 # BOOTSTRAP
 [Intro Page For Bootstrap Website](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+
 Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. OR Bootstrap is a giant collection of handy, reusable bits of code written in HTML, CSS, and JavaScript.
 
 # ADDING BOOTSTRAP TO YOUR PROJECT
@@ -7,15 +8,19 @@ Since bootstrap are collection of css and javascript file they should be added t
 
 ##  USING BOOTSTRAP CDN
 [Link For Bootstrap CDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn)
+
 This method involves adding cached version of Bootstrap’s compiled CSS and JS to your project.There is no point of adding its syntax to this notes as it changes with different version.
 
 ## DOWNLOADING COMPILED VERSION OF BOOTSTRAP
 [Link For Complied Version of CSS and JS](https://getbootstrap.com/docs/4.5/getting-started/download/#compiled-css-and-js)
+
 Using this method bootstrap file can be easily added to project by using standard syntax to add js and css file.
 
 # BOOTSTRAP CLASSES
 [W3's Bootstrap 4 Classes definition](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
+
 [Bootstrap Docs For Bootstrap components](https://getbootstrap.com/docs/4.0/components/)
+
 Bootstrap 4 contains almost 1000 unique classes , so it's a waste to make a comprehensive notes on bootstrap classes. But there are some sites which provide definition for all classes like `w3school` and bootstrap's official documentation  but these links becomes obsolete as new version arrives !!
 
 
@@ -26,6 +31,7 @@ Bootstrap 4 contains almost 1000 unique classes , so it's a waste to make a comp
 
 # NAV BAR
 [Bootstrap Docs For Nav Bar](https://getbootstrap.com/docs/4.0/components/navbar/)
+
 Nav Bar provides easy navigation between different external and internal component of websites which includes support for branding, navigation, and more, including support for collapse plugin.
 For better mobile support bootstrap provide `hamburger` style to minimize nav bar for mobile screen size but it includes javascript codes and javascript framework such as jquery .
 Code To include Hamburger style without javascript code :
@@ -37,6 +43,7 @@ Code To include Hamburger style without javascript code :
 ```
 # BOOTSTRAP ICONS
 [Bootstrap Icon's](https://icons.getbootstrap.com/)
+
 Bootstrap Icons are designed to work with Bootstrap components, from form controls to navigation. Bootstrap Icons are SVGs, so they scale quickly and easily and can be styled with CSS.
 Method to include bootstrap icon using svg.
 ```
@@ -44,6 +51,7 @@ Method to include bootstrap icon using svg.
 ```
 # BOOTSTRAP BORDERS
 [Bootstrap Borders's](https://getbootstrap.com/docs/4.5/utilities/borders/)
+
 Most of the info in provided in bootstrap docs but there is also a very intuitive way of adding border's in bootstrap -
 ```
 <h1 class="border border-left-0">Give me border</h1>
@@ -52,4 +60,5 @@ This will introduce border on all sides except left side since it is assigned ze
 
 # FLEXBOX
 [Info about Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+
 Flexbox Layout help us to provide a efficent way to lay out,align and distribute space among items in an contianer,even when their sizes is unknow and or/ dynamic .

@@ -27,6 +27,7 @@ Vim keys combination can be represented in tree ways:
 11. To move cursor on and before a character - f and t
 12. Add text to one line below and above - o and <S-o>
 13. To move to previous cursor postion - <C-o>
+14. To move link under the cursor - <C-]>
 
 # Delete
 1. To delete a character - x
