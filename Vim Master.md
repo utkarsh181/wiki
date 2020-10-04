@@ -68,13 +68,10 @@ Vim keys combination can be represented in tree ways:
 4. To uppercase a word - gUw
 5. To lowercase a word - guw
 6. To change case of word - g~w
-7. To change case of line - gUU , guu , g~~
+7. To change case of line - gUU , guu , g`~~`
 8. To move in tabs - gt(forward) or gT(backward) + number
 
 # Folding
 m -> more, r -> reduce
 1. To fold entire file or a block - z + <S-m> or z + m
 2. To unfold under cursor - z + o
-
-# Coc bindings
-1. Spell Check Using Coc-Action-\(leader key)+w(for current word)

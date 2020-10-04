@@ -1,11 +1,13 @@
 [Motivation for this note](https://www.youtube.com/watch?v=90gFFdzuZMw&t=149s)
 
 # Strings Sucks
-Strings are defined as an array of characters. The difference between a character array and a string is the string is terminated with a special character ‘\0’.
+Strings are defined as an array of characters. The difference between a character array and
+a string is the string is terminated with a special character ‘\0’.
 Hence there is no primitive data type of strings like in C++ or python .
 
 # Initializing Strings
-This is the most critical part and string's declaration will tell us how string will be treated in our program.
+This is the most critical part and string's declaration will tell us how string will
+be treated in our program.
 ```
 char *name = "Utkarsh" ; // string literal, stored as read only data.
 char another_name[] = "Utkarsh" // character array intialized from string literal, copied to and stored on the stack.

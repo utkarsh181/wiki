@@ -1,5 +1,6 @@
 # My Notes
 
+* [Industrial Society](Industrial Society)
 * [Vim](Vim Master)
 * [DSA]()
 	* [Graphs](Graphs)
