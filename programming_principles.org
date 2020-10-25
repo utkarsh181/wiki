@@ -1,0 +1,105 @@
+#+TITLE: Programming Principles Using C++
+
+* Generic Programming 
+Generic programming: Writing code that works with a variety of types presented as
+arguments, as long as those argument types meet specific syntactic and semantic
+requirements.
+Templates are the basis for generic programming in C++.
+Basically, a template is a mechanism that allows a programmer to use types as parameters
+for a class or a function. The compiler then generates a specific class or function when we
+later provide specific types as arguments.
+#+begin_src c++
+  template<typename T>
+  struct S {
+    S():
+      val{T()} {}
+    S(T x)
+      : val{x} {}
+    T& get();
+    void set(const T& x) { val = x;}
+    T& operator=(const T& x);
+  private:
+    T val;
+  };
+#+end_src
+* Resource Management Problems
+** 'new' and 'delete' pair
+#+begin_src C++
+  void suspicious(int *q, int x)
+  {
+    int *p = new int[100];
+    if(x) p = q;
+    delete[] p; // p may point to diff loacation
+  }
+#+end_src
+** expection problem
+#+begin_src c++
+  void suspicious(int s, int x)
+  {
+    int *p = new int[s];
+    vector<int> v;
+    if(x) p[x] = v.at(x); // at may throw range error
+    delete[] p;
+  }
+#+end_src
+
+In the second case if you consider to tackle problem using try...catch block the technique may work but
+it will make code repetitive and ugly.
+* RAII - Resource Acquisition Is Initialisation
+  We don't need to plaster our code with try...catch blocks to deal with resource leak.
+#+begin_src c++
+  void f(vector<int>& v, int x)
+  {
+    vector<int> p(x);
+    vetor<int> q(x);
+  }
+#+end_src
+In this case resource is acquired during initialisation using constructor and released using destructor.
+* Guarantee
+Sometimes RAII technique fails, for ex:
+#+begin_src c++
+  vector<int>* make_vec(int s)
+  {
+    vector<int>* p = new vector<int> 
+      try{
+        for(int i=0; i<10; i++) p->push_back(i);
+	return p;
+      }
+      catch(...){
+	delete p;
+	throw;
+      }
+  }
+#+end_src
+Above program solves the problem of RAII failure using basic guarantee.
+Types of Guarantee :
+1. Basic Guarantee - in case of failure throw error and hand resource back to program.
+2. Strong Guarantee - basic guarantee + all the observable value should remain same after throw.
+3. No Guarantee 
+* 'smart pointer' - Return of RAII
+  'smart pointer' automatically manages memory and deallocate them when not in use.
+#+begin_src c++
+  vector<int>* test3()
+  {
+    unique_ptr<vector<int>> p{new vector<int>};
+    for(int i=0; i<10; i++) p->push_back(i);
+    return p.release();
+  }
+#+end_src
+'unique_ptr' solves our previous problem in the RAII way. It owns the pointer it points 
+to which means that if exception is thrown while the vector is filled then it insures 
+then vector is properly destroyed.
+* Working with data
+When we write code to compute on data these should be our ideals:
+** Uniform access to data
+** Independently of how it is stored
+** Independently of its type
+** Type-safe access to data
+** Easy traversal of data
+** Compact storage of data
+** Fast
+** Retrieval of data
+** Addition of data
+** Deletion of data
+** Standard versions of the most common algorithms
+** Such as copy, find, search, sort, sum, . . .
