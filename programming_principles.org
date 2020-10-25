@@ -91,15 +91,16 @@ to which means that if exception is thrown while the vector is filled then it in
 then vector is properly destroyed.
 * Working with data
 When we write code to compute on data these should be our ideals:
-** Uniform access to data
-** Independently of how it is stored
-** Independently of its type
-** Type-safe access to data
-** Easy traversal of data
-** Compact storage of data
-** Fast
-** Retrieval of data
-** Addition of data
-** Deletion of data
+1. Uniform access to data
+2. Independently of how it is stored
+3. Independently of its type
+4. Type-safe access to data
+5. Easy traversal of data
+6. Compact storage of data
+7. Fast Retrieval of data
+8. Addition of data
+9. Deletion of data
 ** Standard versions of the most common algorithms
 ** Such as copy, find, search, sort, sum, . . .
+   
+

@@ -58,3 +58,5 @@ Reference are need as they makes hash readable but also but they can be used to 
 - git-branch : to create new branch.
 - git-checkout : switch branches or restore working tree files. // To move to new branch ( ie that is not created ) use git-checkout -b
 - git-diff : to see changes between two commits.
+- git rm file : remove file from git and filesystem
+- git rm --cached file : remove file from git only
