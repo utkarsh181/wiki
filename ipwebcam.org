@@ -4,9 +4,9 @@
   adb devices
   For more: https://wiki.archlinux.org/index.php/Android_Debug_Bridge
 * To forward to localhost
-  adb forward tcp:8081 tcp:8080
+adb forward tcp:8081 tcp:8080
 * IpWebcam Settings
-  http://localhost:8081/
+http://localhost:8081/
 * Some important ip addresses 
-  http://localhost:8081/audio.wav
-  http://localhost:8081/video
+http://localhost:8081/audio.wav
+http://localhost:8081/video
