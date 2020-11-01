@@ -1,56 +1,72 @@
 #+TITLE: Emacs Master Notes
 
 * Info Mode
-** f, l - move forward and back in history respectively 
-** m - list the menu for current node
-** d - Go to the Info directory node
-** L - Go to list of visited node
+1. f, l - move forward and back in history respectively
+2. m - list the menu for current node
+3. d - Go to the Info directory node
+4. L - Go to list of visited node
 * Help Mode
-** C-h i d m KEYWORD - search for KEYWORD in emacs info manual
-** C-h k KEY - describe keybinding 
-** C-h w COMMAND - lists the keys that are bound to COMMAND
-** C-h f FUNCTION - describe function
-** C-h a - search for command 
-** l - move back in history
-** C-h P - describe package
-** C-h S - finds an entry for symbol of a programming language
+1. C-h i d m KEYWORD - search for KEYWORD in emacs info manual
+2. C-h k KEY - describe keybinding
+3. C-h w COMMAND - lists the keys that are bound to COMMAND
+4. C-h f FUNCTION - describe function
+5. C-h a - search for command
+6. l - move back in history
+7. C-h P - describe package
+8. C-h S - finds an entry for symbol of a programming language
 * Edit
-** C-x z - repeat last command
-** C-x SPC - toggle rectangle mark mode
-** C-x r N - sets line number in rectangle
+1. C-x z - repeat last command
+2. C-x SPC - toggle rectangle mark mode
+3. C-x r N - sets line number in rectangle
 * Mark
-** C-<SPC> C-<SPC> - sets mark without activating it
-** C-x C-<SPC> - jumps to latest entry in global buffer
-** C-u C-<SPC> - jump to previous mark
-** C-x C-p - mark page
-** C-x h - mark whole buffer
-** C-u C-/ - undo change in mark
-** C-x (C-l or C-u) - change case in mark
+4. C-<SPC> C-<SPC> - sets mark without activating it
+5. C-x C-<SPC> - jumps to latest entry in global buffer
+6. C-u C-<SPC> - jump to previous mark
+7. C-x C-p - mark page
+8. C-x h - mark whole buffer
+9. C-u C-/ - undo change in mark
+10. C-x (C-l or C-u) - change case in mark
 * Register
-** C-x r n - number-to-register
-   Calling number-to-register without an argument will just store the number 0 to the register you specify. 
+1. C-x r n - number-to-register
+   Calling number-to-register without an argument will just store the number 0 to the register you specify.
    Whereas C-u 100 C-x r n will store 100. In practice, you often want to use the latter method.
-** C-x r s - copy-to-register (think "save string")
-** C-x r r - copy-rectangle-to-register
-** C-x r S - C	point-to-register
-** C-x r w - window-configuration-to-register
-** C-x r f - frameset-to-register (frames and their windows)
-** C-x r + - increment-register (better used with numbers)
+2. C-x r s - copy-to-register (think "save string")
+3. C-x r r - copy-rectangle-to-register
+4. C-x r S - C	point-to-register
+5. C-x r w - window-configuration-to-register
+6. C-x r f - frameset-to-register (frames and their windows)
+7. C-x r + - increment-register (better used with numbers)
    Use increment-register to increment a number by one.
    Pass a numeric argument to increment by that amount instead.
    For example, to increment by five do C-u 5 C-x r + and then select the register you want to operate on.
    This only affects the value stored in the register. It does not also insert it in the buffer.
-** C-x r i - insert-register (text, number, rectangle)
-** C-x r j - jump-to-register (to point or window/frameset config)
+8. C-x r i - insert-register (text, number, rectangle)
+9. C-x r j - jump-to-register (to point or window/frameset config)
 * Windows
-** C-M-l - reposition window heuristically 
-   'reposition-window’ scrolls the current window heuristically in a way 
-   designed to get useful information onto the screen.  
-   For example, in a Lisp file, this command tries to get the 
+1. C-M-l - reposition window heuristically
+   'reposition-window’ scrolls the current window heuristically in a way
+   designed to get useful information onto the screen.
+   For example, in a Lisp file, this command tries to get the
    entire current defun onto the screen if possible.
 ** Narrowing
-*** C-x n n - Narrow down to between point and mark (‘narrow-to-region’).
-*** C-x n w - Widen to make the entire buffer accessible again (‘widen’).
-*** C-x n p - Narrow down to the current page (‘narrow-to-page’).
-*** C-x n d - Narrow down to the current defun (‘narrow-to-defun’).
-
+1. C-x n n - Narrow down to between point and mark (‘narrow-to-region’).
+2. C-x n w - Widen to make the entire buffer accessible again (‘widen’).
+3. C-x n p - Narrow down to the current page (‘narrow-to-page’).
+4. C-x n d - Narrow down to the current defun (‘narrow-to-defun’).
+** whitespaces
+1. show-trailing whitespace
+   <F6> defined in init.el can be used to toggle display of white spaces
+2. C-c z - delete Trailing whitespaces
+* Search and replace
+Numeric argument to search is possible!
+1. M-% - run query replace
+2. M-s o - Run occur on regex
+3. C-M-% - run query replace on regex
+4. M-s . - search word on point
+** Extend I-search
+Following command assumes that you are in 'I-search' prompt.
+1. M-e - edit minibuffer of current search string
+2. C-w - Append word at point to search string or use 
+3. M-s C-e - Append rest of line to search string
+4. C-r - Converts regular search into regex search
+5. M-s o - run occur
