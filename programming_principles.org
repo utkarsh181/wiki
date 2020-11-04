@@ -2,14 +2,15 @@
 #+AUTHOR: Utkarsh Singh
 
 * Generic Programming
-Generic programming: Writing code that works with a variety of types presented as
-arguments, as long as those argument types meet specific syntactic and semantic
-requirements.
+
+Generalizing Code - To find a uniform way of accessing data and manipulating data so that we
+don't have to write our code differently each time data is presented in slightly different way.
 
 Templates are the basis for generic programming in C++.
 Basically, a template is a mechanism that allows a programmer to use types as parameters
 for a class or a function. The compiler then generates a specific class or function when we
 later provide specific types as arguments.
+
 #+begin_src c++
   template<typename T>
   struct S {
@@ -24,8 +25,17 @@ later provide specific types as arguments.
     T val;
   };
 #+end_src
+
 ** Resource management problems
+
+Resources such as memory, stream, control etc are required to be handed back to program when computation on
+them is finished but this is easier said than done.
+
 *** 'new' and 'delete' pair
+
+Problem with naked new-delete pair is that they are error prone. We have to remember to use delete at end and have
+to keep check that our original dynamically allocated pointer still points to same location.
+
 #+begin_src C++
   void suspicious(int *q, int x)
   {
@@ -34,7 +44,11 @@ later provide specific types as arguments.
     delete[] p; // p may point to diff loacation
   }
 #+end_src
-*** expection problem
+
+So you think exception make our program more safe, intuitive etc?
+Try exception in a new-delete pair, now you will not only have to deal with resources but also have to hand resource back to
+main program.
+
 #+begin_src c++
   void suspicious(int s, int x)
   {
@@ -44,77 +58,74 @@ later provide specific types as arguments.
     delete[] p;
   }
 #+end_src
-In the second case if you consider to tackle problem using try...catch block the technique may work but
-it will make code repetitive and ugly.
+
 ** RAII - Resource Acquisition Is Initialisation
-We don't need to plaster our code with try...catch blocks to deal with resource leak.
+
+We don't need to plaster our code with try...catch blocks or even have to use naked new-delete pair for resource management.
+This technique promotes use on constructor-destructor pair to mange resources.
+
+Code below demonstrates how STL vector implement RAII to manage resource on container vector.
+
 #+begin_src c++
-  void f(vector<int>& v, int x)
+  void some_vec(vector<int>& v, int x)
   {
     vector<int> p(x);
-    vetor<int> q(x);
+    for(int i=0; i=100; i++) p.push_back(i)
+    vetor<int> q= v;
+    for(auto i : v) cout << i << " ";
   }
 #+end_src
-In this case resource is acquired during initialisation using constructor and released using destructor.
+
 ** Guarantee
+
 Sometimes RAII technique fails, for ex:
+
 #+begin_src c++
+  // function to return vector
   vector<int>* make_vec(int s)
   {
     vector<int>* p = new vector<int>
       try{
+        // push_back may fail leading to unmanaged p
 	for(int i=0; i<10; i++) p->push_back(i);
-	return;
+	return p;
       }
+      // free resource and then throw again
       catch(...){
 	delete p;
 	throw;
       }
   }
 #+end_src
+
 Above program solves the problem of RAII failure using basic guarantee.
 Types of Guarantee :
 1. Basic Guarantee - in case of failure throw error and hand resource back to program.
 2. Strong Guarantee - basic guarantee + all the observable value should remain same after throw.
 3. No Guarantee
-** 'smart pointer' - return of RAII
-'smart pointer' automatically manages memory and deallocate them when not in use.
-#+begin_src c++
-  template <typename T, typename A>
-  void Vector<T, A>::reserve(int new_alloc)
-  {
-    if (new_alloc <= space) return;   // never decrease allocation
 
-    unique_ptr<T> p{alloc.allocate(new_alloc)};
-    for (int i=0; i<sz; i++) alloc.construct(&p.get()[i], elem[i]); // copy
-    for (int i=0; i<sz; i++) alloc.destroy(&elem[i]);
-    alloc.deallocate(elem, space); // deallocate old space
-    elem = p.release();
-    space = new_alloc;
+** 'smart pointer' - return of RAII
+
+'smart pointer' ows and manage another object through a pointer and disposes of that object when pointer goes
+out of scope. They manage guarantee for you, which means you don't have to memory management in case of exceptions.
+
+#+begin_src c++
+  // function to return vector
+  vector<int>* make_vec(int s)
+  {
+    unique_ptr<vector<int>> p(new vector<int>);
+      for(int i=0; i<10; i++) p->push_back(i);
+    return p.release();
   }
 #+end_src
+
 'smart_pointer' solves our previous problem in the RAII way. It owns the pointer it points
 to which means that if exception is thrown while the vector is filled then it insures
 then vector is properly destroyed.
 * Containers and iterators
-Generalizing Code - To 'find' a uniform way of accessing data and manipulating data so that we
-don't have to write our code differently each time data is presented in slightly different way.
 
-How to make our code generalized?
-
-Niche example of how to find highest element that will work with both vector and arrays.
-#+begin_src c++
-  double* find_highest(double* first, double* last)
-  {
-    double* high = first;
-    while(first != last){
-      if(*high < *first) high = first;
-      first++;
-    }
-    return high;
-  }
-#+end_src
 ** Working with data
+
 When we write code to compute on data these should be our ideals:
 1. Uniform access to data
 2. Independently of how it is stored
@@ -127,7 +138,24 @@ When we write code to compute on data these should be our ideals:
 9. Deletion of data
 10. Standard versions of the most common algorithms
 11. Such as copy, find, search, sort, sum, . . .
-** Sequences and iterators
+
+** Sequences
+
 A sequence is collection of data, mathematically denoted is [begin:end). Here, begin and end are iterators.
 Iterators are used to connect algorithms to data. When using iterators provides independence between algorithms
 and containers.
+
+** Container
+
+Container as name suggest are structure used to store sequence. STL provide many useful containers, from which I
+will try to overview those which I have used/tested.
+
+| Standard Container/Almost Containers | Advantages                                                  |
+| vector                               | should be considered as default container, memory efficient |
+|                                      | provide random access with O(1)                             |
+| list                                 | double linked list, use when you need to insert and delete  |
+|                                      | without moving existing elem                                |
+| string                               | hold only characters but provide useful text manipulation   |
+|                                      | suck as concatenation using '+'                             |
+| array                                | a fixed-size array that knows it's size, does not decay to  |
+|                                      | T* automatically                                            |

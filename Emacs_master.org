@@ -1,5 +1,7 @@
 #+TITLE: Emacs Master Notes
 
+Emacs is a self documenting editor and writing documentation for it's keybinding is
+dumb af.
 * Info Mode
 1. f, l - move forward and back in history respectively
 2. m - list the menu for current node
@@ -19,13 +21,13 @@
 2. C-x SPC - toggle rectangle mark mode
 3. C-x r N - sets line number in rectangle
 * Mark
-4. C-<SPC> C-<SPC> - sets mark without activating it
-5. C-x C-<SPC> - jumps to latest entry in global buffer
-6. C-u C-<SPC> - jump to previous mark
-7. C-x C-p - mark page
-8. C-x h - mark whole buffer
-9. C-u C-/ - undo change in mark
-10. C-x (C-l or C-u) - change case in mark
+1. C-<SPC> C-<SPC> - sets mark without activating it
+2. C-x C-<SPC> - jumps to latest entry in global buffer
+3. C-u C-<SPC> - jump to previous mark
+4. C-x C-p - mark page
+5. C-x h - mark whole buffer
+6. C-u C-/ - undo change in mark
+7. C-x (C-l or C-u) - change case in mark
 * Register
 1. C-x r n - number-to-register
    Calling number-to-register without an argument will just store the number 0 to the register you specify.
@@ -43,11 +45,6 @@
 8. C-x r i - insert-register (text, number, rectangle)
 9. C-x r j - jump-to-register (to point or window/frameset config)
 * Windows
-1. C-M-l - reposition window heuristically
-   'reposition-window’ scrolls the current window heuristically in a way
-   designed to get useful information onto the screen.
-   For example, in a Lisp file, this command tries to get the
-   entire current defun onto the screen if possible.
 ** Narrowing
 1. C-x n n - Narrow down to between point and mark (‘narrow-to-region’).
 2. C-x n w - Widen to make the entire buffer accessible again (‘widen’).
@@ -60,13 +57,11 @@
 * Search and replace
 Numeric argument to search is possible!
 1. M-% - run query replace
-2. M-s o - Run occur on regex
-3. C-M-% - run query replace on regex
-4. M-s . - search word on point
+2. M-s o - run occur on regex
+3. M-s . - search word on point
 ** Extend I-search
 Following command assumes that you are in 'I-search' prompt.
-1. M-e - edit minibuffer of current search string
-2. C-w - Append word at point to search string or use 
+1. C-h C-h - runs help
+2. M-e - edit minibuffer of current search string
 3. M-s C-e - Append rest of line to search string
 4. C-r - Converts regular search into regex search
-5. M-s o - run occur
