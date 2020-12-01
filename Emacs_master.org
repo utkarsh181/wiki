@@ -26,6 +26,17 @@ dumb af.
 1. C-x z - repeat last command
 2. C-x SPC - toggle rectangle mark mode
 3. C-x r N - sets line number in rectangle
+4. M-m - move to first non whitespace character in line
+5. =M-x subword-mode= - treats CamelCase as distinct word
+6. =M-x superword-mode= - treats snake_case as one word
+
+** s-expression
+
+1. C-M-f - move forward by s-exp
+2. C-M-b - move backward by ..
+3. C-M-d - move down into a list
+4. C-M-u - move up a list
+5. C-M-k - kill a s-exp   
 
 * Mark
 
@@ -63,6 +74,9 @@ dumb af.
 
 * Windows
 
+1. C-x } - make window wider
+2. C-x { - make window narrower
+
 ** Narrowing
 
 1. C-x n n - Narrow down to between point and mark (‘narrow-to-region’).
@@ -85,6 +99,7 @@ dumb af.
 * Macros
 
 Finally!!
+
 1. F3 & F4 - start and end definition of macro
 2. F4 & C-x e - execute macro
 3. C-u C-u F3 - append key to last macro without executing it
@@ -93,5 +108,11 @@ Finally!!
 * Files
 
 1. Variable default-directory stores working directory for the current buffer.
-It's value can be obtained by =M-x pwd= and altered using =M-x cd=.
+   It's value can be obtained by =M-x pwd= and altered using =M-x cd=.
 2. To change visited buffer file name =M-x set-visited-file-name=.
+
+** Image files
+
+1. n and p - to move around images in same directory
+2. m - mark image in the subsequent dired buffer
+   
