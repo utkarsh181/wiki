@@ -27,8 +27,8 @@ dumb af.
 2. C-x SPC - toggle rectangle mark mode
 3. C-x r N - sets line number in rectangle
 4. M-m - move to first non whitespace character in line
-5. =M-x subword-mode= - treats CamelCase as distinct word
-6. =M-x superword-mode= - treats snake_case as one word
+5. M-x subword-mode - treats CamelCase as distinct word
+6. M-x superword-mode - treats snake_case as one word
 
 ** s-expression
 
@@ -84,7 +84,7 @@ dumb af.
 3. C-x n p - Narrow down to the current page (‘narrow-to-page’).
 4. C-x n d - Narrow down to the current defun (‘narrow-to-defun’).
 
-** whitespaces
+** Whitespaces
 
 1. show-trailing whitespace
    <F6> defined in init.el can be used to toggle display of white spaces
@@ -116,3 +116,15 @@ Finally!!
 1. n and p - to move around images in same directory
 2. m - mark image in the subsequent dired buffer
    
+* Modes
+
+Emacs chooses a major mode automatically. But to specify it using file-local
+mode variable:
+
+put the mode name in the first nonblank line, preceded and followed by ‘-*-’.
+For ex:
+     ; -*-Lisp-*-
+     ; -*- mode: Lisp;-*-
+
+To specify minor modes also:
+     ; -*- mode: Lisp; eval: (auto-fill-mode 1); -*-
