@@ -29,6 +29,8 @@ dumb af.
 4. M-m - move to first non whitespace character in line
 5. M-x subword-mode - treats CamelCase as distinct word
 6. M-x superword-mode - treats snake_case as one word
+7. C-x TAB - change the indentation of all lines that
+   begin in the region
 
 ** s-expression
 
@@ -128,3 +130,8 @@ For ex:
 
 To specify minor modes also:
      ; -*- mode: Lisp; eval: (auto-fill-mode 1); -*-
+* Dired
+
+1. C-x C-j - dired jump
+2. C-c C-j - dired jump other window
+3. C-u k - kill sub-directory listing
