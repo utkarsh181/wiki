@@ -135,3 +135,4 @@ To specify minor modes also:
 1. C-x C-j - dired jump
 2. C-c C-j - dired jump other window
 3. C-u k - kill sub-directory listing
+4. W - command will use the standard configured browser to view that file.
