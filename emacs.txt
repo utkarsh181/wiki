@@ -1,6 +1,3 @@
-Emacs is a self documenting editor and writing notes for it's keybinding is
-dumb af.
-
 * Info Mode
 
 1. f, l - move forward and back in history respectively
@@ -53,12 +50,15 @@ dumb af.
 1. M-- M-l - convert last word to lower case
 2. M-- M-u - convert last word to all uppercase
 3. M-- M-c - convert last word initial to capital
+4. C-x C-l/u/c - convert case in region
 
 * Register
 
 1. C-x r n - number-to-register
-   Calling number-to-register without an argument will just store the number 0 to the register you specify.
-   Whereas =C-u 100 C-x r n= will store 100. In practice, you often want to use the latter method.
+   Calling number-to-register without an argument will just store the
+   number 0 to the register you specify.
+   Whereas =C-u 100 C-x r n= will store 100. In practice, you often want
+   to use the latter method.
 2. C-x r s - copy-to-register (think "save string")
 3. C-x r r - copy-rectangle-to-register
 4. C-x r S - C	point-to-register
@@ -67,7 +67,8 @@ dumb af.
 7. C-x r + - increment-register (better used with numbers)
    Use increment-register to increment a number by one.
    Pass a numeric argument to increment by that amount instead.
-   For example, to increment by five do C-u 5 C-x r + and then select the register you want to operate on.
+   For example, to increment by five do C-u 5 C-x r + and then select
+   the register you want to operate on.
    This only affects the value stored in the register. It does not also insert it in the buffer.
 8. C-x r i - insert-register (text, number, rectangle)
 9. C-x r j - jump-to-register (to point or window/frameset config)
