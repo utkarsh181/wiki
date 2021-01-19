@@ -26,6 +26,7 @@
 6. M-x superword-mode - treats snake_case as one word
 7. C-x TAB - change the indentation of all lines that
    begin in the region
+8. M-^ - join line
 
 ** s-expression
 
@@ -95,7 +96,6 @@
 
 1. M-% - run query replace
 2. M-s o - run occur on regex
-3. M-s . - search word on point
 
 * Macros
 
@@ -136,3 +136,20 @@ To specify minor modes also:
 2. C-c C-j - dired jump other window
 3. C-u k - kill sub-directory listing
 4. W - command will use the standard configured browser to view that file.
+
+* Isearch
+
+1. Alternative: https://github.com/raxod502/ctrlf
+2. C-h k C-s - one note to search them all!
+
+* Eshell
+1. >>> redirects output to buffer
+   Ex: echo hello >>> #<buffer *scratch*>
+2. /dev/kill and /dev/clip
+
+* Users
+
+Abo-abo(ivy): https://github.com/abo-abo/oremacs
+Prot: https://gitlab.com/protesilaos/dotfiles/-/tree/master/emacs/.emacs.d
+Ambrevar(Nyxt): https://gitlab.com/ambrevar/dotfiles/-/tree/master/.emacs.d
+Purecell(MELPA): https://github.com/purcell/emacs.d
