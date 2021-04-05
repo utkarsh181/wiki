@@ -14,7 +14,7 @@
 5. C-h a - search for command
 6. l - move back in history
 7. C-h P - describe package
-8. C-h S - finds an entry for symbol of a programming language
+8. C-h S - info lookup symbol (really good for glibc)
 
 * Edit
 
