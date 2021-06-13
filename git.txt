@@ -1,5 +1,9 @@
 # Intro To Git
-Git is a distributed version-control system for tracking changes in source code during software development.It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
+
+Git is a distributed version-control system for tracking changes in
+source code during software development.It is designed for
+coordinating work among programmers, but it can be used to track
+changes in any set of files.
 
 # Terminology's in Git
 - root : The folder that is currently tracked by git.
@@ -7,7 +11,8 @@ Git is a distributed version-control system for tracking changes in source code 
 - blob : These are the file inside trees.
 
 # Data Structure Of Git
-Git follows [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) as there data structure which means that they are just directed graph which doesn't contains any cycle.
+
+Git follows [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)as there data structure which means that they are just directed graph which doesn't contains any cycle.
 It's data types are defined as -
 ```
 // This is just pseudo code

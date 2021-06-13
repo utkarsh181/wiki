@@ -127,6 +127,7 @@ then vector is properly destroyed.
 ** Working with data
 
 When we write code to compute on data these should be our ideals:
+
 1. Uniform access to data
 2. Independently of how it is stored
 3. Independently of its type
@@ -137,25 +138,33 @@ When we write code to compute on data these should be our ideals:
 8. Addition of data
 9. Deletion of data
 10. Standard versions of the most common algorithms
-11. Such as copy, find, search, sort, sum, . . .
+11. Such as copy, find, search, sort, sum etc.
 
 ** Sequences
 
-A sequence is collection of data, mathematically denoted is [begin:end). Here, begin and end are iterators.
-Iterators are used to connect algorithms to data. When using iterators provides independence between algorithms
-and containers.
+A sequence is collection of data, mathematically denoted is
+[begin:end). Here, begin and end are iterators.  Iterators are used to
+connect algorithms to data. When using iterators provides independence
+between algorithms and containers.
 
 ** Container
 
-Container as name suggest are structure used to store sequence. STL provide many useful containers, from which I
-will try to overview those which I have used/tested.
+Container as name suggest are structure used to store sequence. STL
+provide many useful containers, from which I will try to overview
+those which I have used/tested.
 
+|--------------------------------------+-------------------------------------------------------------|
 | Standard Container/Almost Containers | Advantages                                                  |
+|--------------------------------------+-------------------------------------------------------------|
 | vector                               | should be considered as default container, memory efficient |
 |                                      | provide random access with O(1)                             |
+|--------------------------------------+-------------------------------------------------------------|
 | list                                 | double linked list, use when you need to insert and delete  |
 |                                      | without moving existing elem                                |
+|--------------------------------------+-------------------------------------------------------------|
 | string                               | hold only characters but provide useful text manipulation   |
 |                                      | suck as concatenation using '+'                             |
+|--------------------------------------+-------------------------------------------------------------|
 | array                                | a fixed-size array that knows it's size, does not decay to  |
 |                                      | T* automatically                                            |
+|--------------------------------------+-------------------------------------------------------------|

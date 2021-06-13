@@ -1,0 +1,7 @@
+#+TITLE: Virtual Box Settings
+
+* To make guest fullscreen
+
+#+BEGIN_SRC sh  
+Vboxmanage setextradata "VM name" VBoxInternal2/EfiGraphicsResolution 1920x1080
+#+END_SRC sh
